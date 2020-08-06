@@ -1,0 +1,34 @@
+title = "scmbd database sync"
+
+[db]
+host = "127.0.0.1"
+port = 3306
+user = "root"
+password = "ENC(3c1edb8875c4defa9787d9e7b4d0b23bfb30a1e8b60e48049a64ce)"
+dbname = "scmbd"
+
+[tb]
+schemes = ["scmbd_user", "scmbd_org", "scmbd_menu", "scmbd_role", "scmbd_role_menu", "scmbd_user_role"] # TODO scmbd_menu should add afeter table scmbd_menu has been modified
+    [tb.scmbd_user]
+    SQL = "select id, aes_decrypt(name, 'des%lu#v234@3czp') as name, aes_decrypt(username, 'des%lu#v234@3czp') as username,system_user_role, create_time, update_time, user_status, org_id from scmbd_user"
+    [tb.scmbd_org]
+    SQL = "select id, name, parent_id, create_time, update_time from scmbd_org"
+    [tb.scmbd_menu]
+    SQL = "select id, board_id, identification, name, parent_id, leaf_type, url, url_type, create_time, update_time from scmbd_menu"
+    [tb.scmbd_role]
+    SQL = "select id, name,creator_id, create_time, update_time from scmbd_role"
+    [tb.scmbd_role_menu]
+    SQL = "select id, menu_id, role_id from scmbd_role_menu"
+    [tb.scmbd_user_role]
+    SQL = "select id, user_id, role_id from scmbd_user_role"
+
+[stor]
+storageDir = "."
+
+[remote]
+mode = "sftp" # ftp or sftp
+host = "127.0.0.1"
+port = 22
+user = "root"
+password = ""
+workingDir = ""

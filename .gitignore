@@ -1,0 +1,16 @@
+.idea
+target/
+logs/
+*.pyc
+pkg
+*.lock
+# Log file
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.iml
