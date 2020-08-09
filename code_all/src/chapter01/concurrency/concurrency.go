@@ -36,8 +36,8 @@ func main() {
 	// 创建一个字符串类型的通道
 	channel := make(chan string)
 	// 创建producer函数的并发goroutine
-	go producer("cat", channel)
-	go producer("dog", channel)
+	go producer("go1:cat", channel)
+	go producer("go2:dog", channel)
 	// 数据消费函数
 	consumer(channel)
 }
