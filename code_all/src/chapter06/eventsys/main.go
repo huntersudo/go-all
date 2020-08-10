@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+//import "./reg"
+
 // 声明角色的结构体
 type Actor struct {
 }

@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+/**
+使用类型分支判断接口类型
+*/
 // 电子支付方式
 type Alipay struct {
 }

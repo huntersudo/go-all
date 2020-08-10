@@ -7,6 +7,7 @@ import (
 )
 
 // 定义命令行参数
+// args: 名称【注册的指针】、默认值、说明
 var mode = flag.String("mode", "", "process mode")
 
 func main() {

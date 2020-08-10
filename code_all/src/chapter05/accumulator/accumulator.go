@@ -9,10 +9,8 @@ func Accumulate(value int) func() int {
 
 	// 返回一个闭包
 	return func() int {
-
 		// 累加
 		value++
-
 		// 返回一个累加值
 		return value
 	}

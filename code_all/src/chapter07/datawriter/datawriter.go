@@ -4,6 +4,9 @@ import (
 	"fmt"
 )
 
+/**
+接口的方法与实现接口的类型方法格式一致
+*/
 // 定义一个数据写入器
 type DataWriter interface {
 	WriteData(data interface{}) error

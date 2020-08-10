@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+/**
+类型断言
+*/
 // 飞行物接口
 type Flyer interface {
 	Fly()

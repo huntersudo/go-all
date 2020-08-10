@@ -6,6 +6,7 @@ import "fmt"
 type ChipType int
 
 const (
+	////将 const 里定义的常量值设为 ChipType 类型，且从 0 开始，每行值加 1。
 	None ChipType = iota
 	CPU           // 中央处理器
 	GPU           // 图形处理器

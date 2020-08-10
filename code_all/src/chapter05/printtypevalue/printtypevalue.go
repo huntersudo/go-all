@@ -31,13 +31,10 @@ func printTypeValue(slist ...interface{}) string {
 
 		// 写值字符串前缀
 		b.WriteString("value: ")
-
 		// 写入值
 		b.WriteString(str)
-
 		// 写类型前缀
 		b.WriteString(" type: ")
-
 		// 写类型字符串
 		b.WriteString(typeString)
 

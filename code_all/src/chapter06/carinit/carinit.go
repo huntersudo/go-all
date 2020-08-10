@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+/**
+初始化内嵌结构体
+*/
 // 车轮
 type Wheel struct {
 	Size int

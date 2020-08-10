@@ -38,7 +38,8 @@ func main() {
 	}
 
 	// 创建文件
-	file, err := os.Create("sin.png")
+	path := "E:\\workspaces\\go-all\\code_all\\src\\chapter02\\sinimage\\"
+	file, err := os.Create(path + "sin.png")
 
 	if err != nil {
 		log.Fatal(err)

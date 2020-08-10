@@ -5,8 +5,11 @@ import (
 	"strings"
 )
 
+/**
+todo
+*/
 // 字符串处理函数，传入字符串切片和处理链
-func StringProccess(list []string, chain []func(string) string) {
+func StringProcess(list []string, chain []func(string) string) {
 
 	// 遍历每一个字符串
 	for index, str := range list {
@@ -43,7 +46,8 @@ func main() {
 		"go formater",
 	}
 
-	// 处理函数链
+	// 处理函数链 todo
+	// 函数签名 func(string) string
 	chain := []func(string) string{
 		removePrefix,
 		strings.TrimSpace,
@@ -51,7 +55,7 @@ func main() {
 	}
 
 	// 处理字符串
-	StringProccess(list, chain)
+	StringProcess(list, chain)
 
 	// 输出处理好的字符串
 	for _, str := range list {

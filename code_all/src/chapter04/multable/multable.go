@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+/**
+乘法表
+*/
 func main() {
 
 	// 遍历，决定处理第几行

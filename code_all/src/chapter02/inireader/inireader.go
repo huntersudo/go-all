@@ -83,7 +83,8 @@ func getValue(filename, expectSection, expectKey string) string {
 
 func main() {
 
-	fmt.Println(getValue("example.ini", "remote \"origin\"", "fetch"))
+	path := "E:\\workspaces\\go-all\\code_all\\src\\chapter02\\inireader\\"
+	fmt.Println(getValue(path+"example.ini", "remote \"origin\"", "fetch"))
 
-	fmt.Println(getValue("example.ini", "core", "hideDotFiles"))
+	fmt.Println(getValue(path+"example.ini", "core", "hideDotFiles"))
 }

@@ -2,6 +2,10 @@ package main
 
 import "math"
 
+/**
+func (接收器变量 接收器类型) 方法名(参数列表) (返回参数) {
+*/
+
 type Vec2 struct {
 	X, Y float32
 }

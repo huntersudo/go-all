@@ -1,5 +1,8 @@
 package main
 
+/**
+func (接收器变量 接收器类型) 方法名(参数列表) (返回参数) {
+*/
 type Player struct {
 	currPos   Vec2    // 当前位置
 	targetPos Vec2    // 目标位置

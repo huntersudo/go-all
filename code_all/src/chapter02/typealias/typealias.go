@@ -45,3 +45,8 @@ func main() {
 		fmt.Printf("FieldName: %v, FieldType: %v\n", f.Name, f.Type.Name())
 	}
 }
+
+/**
+这个例子中，FakeBrand 是 Brand 的一个别名，在 Vehicle 中嵌入 FakeBrand 和 Brand 并不意味着嵌入两个 Brand，FakeBrand 的类型会以名字的方式保留在 Vehicle 的成员中。
+
+*/

@@ -6,7 +6,7 @@ import (
 )
 
 // 定义除数为0的错误
-var errDivisionByZero = errors.New("division by zero")
+var errDivisionByZero = errors.New("error: division by zero")
 
 func div(dividend, divisor int) (int, error) {
 
