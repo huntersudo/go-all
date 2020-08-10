@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+/**
+todo
+Go语言实现日志系统
+ */
 // 创建日志器
 func createLogger() *Logger {
 

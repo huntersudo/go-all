@@ -31,7 +31,6 @@ func (f *fileWriter) Write(data interface{}) error {
 
 	// 日志文件可能没有创建成功
 	if f.file == nil {
-
 		// 日志文件没有准备好
 		return errors.New("file not created")
 	}

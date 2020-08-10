@@ -65,7 +65,6 @@ func main() {
 
 		// 将值转为int类型，并判断是否大于40
 		if value.(int) > 40 {
-
 			// 输出很贵
 			fmt.Println(key, "is expensive")
 			return true

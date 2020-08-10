@@ -4,6 +4,12 @@ import (
 	"fmt"
 )
 
+/**
+todo
+有限状态机又简称 FSM（Finite-State Machine 的首字母缩写），也可以称为有限状态自动机。
+它是为研究有限内存的计算过程和某些语言类而抽象出的一种计算模型。
+有限状态机拥有有限数量的状态，每个状态可以迁移到零个或多个状态，输入字串决定执行哪个状态的迁移。
+ */
 // 闲置状态
 type IdleState struct {
 	StateInfo // 使用StateInfo实现基础接口
