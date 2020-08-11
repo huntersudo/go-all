@@ -2,7 +2,7 @@
 target/
 logs/
 *.pyc
-pkg
+
 *.lock
 # Log file
 *.png
@@ -14,3 +14,4 @@ pkg
 *.tar.gz
 *.rar
 *.iml
+*log

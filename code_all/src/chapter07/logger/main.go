@@ -5,7 +5,7 @@ import "fmt"
 /**
 todo
 Go语言实现日志系统
- */
+*/
 // 创建日志器
 func createLogger() *Logger {
 
@@ -38,5 +38,8 @@ func main() {
 	l := createLogger()
 
 	// 写一个日志
-	l.Log("hello")
+	l.Log("hello-1")
+	l.Log("hello-2")
+	l.Log("hello-3")
+	l.Log("hello-4")
 }
