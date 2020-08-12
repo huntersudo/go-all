@@ -25,7 +25,7 @@ func main() {
 	ch1 = make(chan int, 1)
 
 	// 向管道写入数据
-	// ch1<- 1  // .\chan2.go:29:5: invalid operation: ch1 <- 1 (send to receive-only type <-chan int)
+	//ch1<- 1  // .\chan2.go:29:5: invalid operation: ch1 <- 1 (send to receive-only type <-chan int)
 
-	//fmt.Println(ch1)
+	fmt.Println(ch1)
 }

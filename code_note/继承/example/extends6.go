@@ -7,17 +7,17 @@ import (
 	"fmt"
 )
 
-type A struct {
+type A2 struct {
 	Name string
 }
 
-type B struct {
-	a A // 嵌套一个有名结构体，
+type B2 struct {
+	a A2 // 嵌套一个有名结构体，
 }
 
 func main() {
 
-	var b B
+	var b B2
 
 	// 这样写会报错，因为B嵌套的是一个有名结构体，
 	// 必须通过名字来方法，b.a.Name = "张三"，否则报错

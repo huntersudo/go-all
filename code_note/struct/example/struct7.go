@@ -6,23 +6,23 @@ import (
 	"fmt"
 )
 
-type Book struct {
+type Book1 struct {
 	BookName  string
 	BookPrice int
 }
 
-type Stu struct {
+type Stu1 struct {
 	StuName    string
 	StuAge     int
-	StuFavBook Book
+	StuFavBook Book1
 }
 
 func main() {
 
-	s1 := Stu{
+	s1 := Stu1{
 		StuName: "pengw",
 		StuAge:  20,
-		StuFavBook: Book{
+		StuFavBook: Book1{
 			BookName:  "Go语言",
 			BookPrice: 20,
 		},

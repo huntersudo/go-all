@@ -8,17 +8,17 @@ import (
 	"fmt"
 )
 
-type A struct {
+type A1 struct {
 	Name string
 }
 
-type B struct {
+type B1 struct {
 	Name string
 }
 
 type C struct {
-	A
-	B
+	A1
+	B1
 }
 
 func main() {
@@ -30,6 +30,6 @@ func main() {
 	//c.Name = "张三"
 
 	//正确的方式
-	c.A.Name = "张三"
-	fmt.Println(c.A.Name) // output: 张三
+	c.A1.Name = "张三"
+	fmt.Println(c.A1.Name) // output: 张三
 }

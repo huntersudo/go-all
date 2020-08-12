@@ -7,28 +7,28 @@ import (
 	"fmt"
 )
 
-type Stu struct {
+type Stu1 struct {
 	Name string // 字符名大写
 	age  int    // 字符名小写
 }
 
 // 方法名大写
-func (a Stu) Say() {
+func (a Stu1) Say() {
 	fmt.Println("Say() ", a.Name, a.age)
 }
 
 // 方法名小写
-func (a Stu) eat() {
+func (a Stu1) eat() {
 	fmt.Println("eat() ")
 }
 
-type Puple struct {
-	Stu // 继承Stu结构体
+type Puple1 struct {
+	Stu1 // 继承Stu结构体
 }
 
 func main() {
 
-	var p Puple
+	var p Puple1
 
 	p.Name = "小明"
 	p.age = 20

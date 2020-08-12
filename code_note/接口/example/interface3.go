@@ -7,17 +7,17 @@ import (
 	"fmt"
 )
 
-type A interface {
+type A3 interface {
 	Say()
 }
 
-type B interface {
+type B3 interface {
 	Play()
 }
 
-type C interface {
-	A // 继承A接口
-	B // 继承B接口
+type C3 interface {
+	A3 // 继承A接口
+	B3 // 继承B接口
 	Eat()
 }
 
@@ -39,21 +39,21 @@ type D struct {
 
 // 下面的是正确的
 func (d D) Eat() {
-	fmt.Println("Eat() ....")
+	fmt.Println("D Eat() ....")
 }
 
 func (d D) Say() {
-	fmt.Println("Say() ....")
+	fmt.Println("D Say() ....")
 }
 
 func (d D) Play() {
-	fmt.Println("Play() ....")
+	fmt.Println(" D Play() ....")
 }
 
 func main() {
 
 	var d D
-	var c C = d
+	var c C3 = d
 
 	c.Eat()
 	c.Say()

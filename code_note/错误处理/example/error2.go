@@ -14,7 +14,7 @@ func errorsNew(name string) (err error) {
 		return nil
 	}
 
-	return errors.New("name error")
+	return errors.New("name error---1111")
 }
 
 func paincFunc(name string) {

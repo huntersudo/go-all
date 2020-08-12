@@ -7,11 +7,11 @@ import (
 	"fmt"
 )
 
-type A interface {
+type A4 interface {
 }
 
 func main() {
-	var a A
+	var a A4
 
 	fmt.Println(a) // output: <nil>
 }

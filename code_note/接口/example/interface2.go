@@ -7,32 +7,33 @@ import (
 )
 
 // A接口
-type A interface {
+type A2 interface {
 	Say()
 }
 
 // B接口
-type B interface {
+type B2 interface {
 	Play()
 }
 
-type C struct {
+type C2 struct {
 }
 
-func (c C) Say() {
-	fmt.Println("Say() ....")
+// C2 同时实现2个接口
+func (c C2) Say() {
+	fmt.Println("C2 Say() ....")
 }
 
-func (c C) Play() {
-	fmt.Println("Play() ....")
+func (c C2) Play() {
+	fmt.Println("C2 Play() ....")
 }
 
 func main() {
 
-	var c C
+	var c C2
 
-	var a A = c
-	var b B = c
+	var a A2 = c
+	var b B2 = c
 
 	a.Say()
 	b.Play()

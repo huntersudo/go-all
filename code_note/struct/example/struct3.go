@@ -6,19 +6,19 @@ import (
 	"fmt"
 )
 
-type User struct {
+type User1 struct {
 	Name string
 	Age  int
 	Sex  string
 }
 
-func (u User) say() {
+func (u User1) say() {
 	fmt.Println(u.Name, u.Age, u.Sex) //  张三 12 男
 }
 
 func main() {
 
-	u := User{"张三", 12, "男"}
+	u := User1{"张三", 12, "男"}
 	//调用方法
 	u.say()
 }

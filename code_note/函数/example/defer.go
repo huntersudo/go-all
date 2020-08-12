@@ -6,7 +6,7 @@ package main
 
 import "fmt"
 
-func test() {
+func test2() {
 
 	defer fmt.Println("test1")
 	defer fmt.Println("test2")
@@ -16,7 +16,7 @@ func test() {
 
 func main() {
 
-	test()
+	test2()
 
 	fmt.Println("test4")
 }

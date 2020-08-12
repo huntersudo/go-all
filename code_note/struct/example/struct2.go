@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-type User struct {
+type User3 struct {
 	Name string
 	Age  int
 	Sex  string
@@ -15,7 +15,7 @@ type User struct {
 func main() {
 
 	// 声明并初始化
-	u1 := User{"张飞", 30, "男"}
+	u1 := User3{"张飞", 30, "男"}
 	// 赋值
 	u2 := u1
 

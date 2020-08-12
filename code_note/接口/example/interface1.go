@@ -6,21 +6,21 @@ import (
 	"fmt"
 )
 
-type A interface {
+type A1 interface {
 	Say()
 }
 
-type B struct {
+type B1 struct {
 }
 
-func (b B) Say() {
-	fmt.Println("Say().....")
+func (b B1) Say() {
+	fmt.Println("B1 Say().....")
 }
 
 func main() {
 
-	var b B
-	var a A = b
+	var b B1
+	var a A1 = b
 	a.Say()
 	// output:
 	// Say().....

@@ -17,6 +17,7 @@ func (s Stu) Say() {
 	fmt.Println("Stu结构体中Say() ", s.Name)
 }
 
+///////////////////////////////
 // Puple结构体
 type Puple struct {
 	Stu  //继承匿名结构体

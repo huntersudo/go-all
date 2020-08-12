@@ -5,7 +5,7 @@ package main
 
 import "fmt"
 
-func test() {
+func test3() {
 
 	//匿名函数
 	fun := func() {
@@ -26,5 +26,5 @@ func test() {
 
 func main() {
 
-	test()
+	test3()
 }
