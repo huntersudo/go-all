@@ -9,7 +9,7 @@ import (
 	"github.com/davyxu/golog"
 )
 
-var log = golog.New("main")
+var log = golog.New("server")
 
 func onMessage(ses cellnet.Session, raw interface{}) {
 

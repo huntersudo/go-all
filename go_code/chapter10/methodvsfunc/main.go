@@ -39,14 +39,14 @@ func main() {
 	test02(&p)
 
 	p.test03()
-	fmt.Println("main() p.name=", p.Name) // tom
+	fmt.Println("server() p.name=", p.Name) // tom
 
 	(&p).test03() // 从形式上是传入地址，但是本质仍然是值拷贝
 
-	fmt.Println("main() p.name=", p.Name) // tom
+	fmt.Println("server() p.name=", p.Name) // tom
 
 	(&p).test04()
-	fmt.Println("main() p.name=", p.Name) // mary
-	p.test04()                            // 等价 (&p).test04 , 从形式上是传入值类型，但是本质仍然是地址拷贝
+	fmt.Println("server() p.name=", p.Name) // mary
+	p.test04()                              // 等价 (&p).test04 , 从形式上是传入值类型，但是本质仍然是地址拷贝
 
 }

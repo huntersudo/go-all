@@ -33,10 +33,10 @@ func main() {
 	n1 := 10
 	//调用test
 	test(n1)
-	fmt.Println("main() n1=", n1) //?输出结果= ?
+	fmt.Println("server() n1=", n1) //?输出结果= ?
 
 	sum := getSum(10, 20)
-	fmt.Println("main sum = ", sum) // 30
+	fmt.Println("server sum = ", sum) // 30
 
 	//调用getSumAndSub
 	res1, res2 := getSumAndSub(1, 2) //res1 = 3 res2 = -1

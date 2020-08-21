@@ -37,7 +37,7 @@ func main() {
 
 	//创建一个Circle 变量
 	var c Circle
-	fmt.Printf("main c 结构体变量地址 =%p\n", &c)
+	fmt.Printf("server c 结构体变量地址 =%p\n", &c)
 	c.radius = 7.0
 	//res2 := (&c).area2()
 	//编译器底层做了优化  (&c).area2() 等价 c.area()

@@ -22,7 +22,7 @@ func (c *ByteCounter) Write(p []byte) (int, error) {
 //!-bytecounter
 
 func main() {
-	//!+main
+	//!+server
 	var c ByteCounter
 	c.Write([]byte("hello"))
 	fmt.Println(c) // "5", = len("hello")
@@ -31,5 +31,5 @@ func main() {
 	var name = "Dolly"
 	fmt.Fprintf(&c, "hello, %s", name)
 	fmt.Println(c) // "12", = len("hello, Dolly")
-	//!-main
+	//!-server
 }

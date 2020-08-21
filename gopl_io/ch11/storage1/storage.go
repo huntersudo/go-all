@@ -4,7 +4,7 @@
 // See page 311.
 
 // Package storage is part of a hypothetical cloud storage server.
-//!+main
+//!+server
 package storage
 
 import (
@@ -42,4 +42,4 @@ func CheckQuota(username string) {
 	}
 }
 
-//!-main
+//!-server

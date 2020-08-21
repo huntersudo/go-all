@@ -26,11 +26,11 @@ func nonempty(strings []string) []string {
 //!-nonempty
 
 func main() {
-	//!+main
+	//!+server
 	data := []string{"one", "", "three"}
 	fmt.Printf("%q\n", nonempty(data)) // `["one" "three"]`
 	fmt.Printf("%q\n", data)           // `["one" "three" "three"]`
-	//!-main
+	//!-server
 }
 
 //!+alt

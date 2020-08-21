@@ -90,7 +90,7 @@ func main() {
 	InsertSort(&arr)
 	end := time.Now().Unix()
 
-	fmt.Println("main 函数")
+	fmt.Println("server 函数")
 	fmt.Printf("插入排序耗时%d秒", end-start)
 	//fmt.Println(arr)
 }

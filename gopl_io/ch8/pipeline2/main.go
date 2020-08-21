@@ -29,7 +29,7 @@ func main() {
 		close(squares)
 	}()
 
-	// Printer (in main goroutine)
+	// Printer (in server goroutine)
 	for x := range squares {
 		fmt.Println(x)
 	}

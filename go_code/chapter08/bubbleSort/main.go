@@ -36,5 +36,5 @@ func main() {
 
 	BubbleSort(&arr)
 
-	fmt.Println("main arr=", arr) //有序? 是有序的
+	fmt.Println("server arr=", arr) //有序? 是有序的
 }

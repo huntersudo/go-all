@@ -24,7 +24,7 @@ func main() {
 
 	var e error
 	// 创建一个错误实例，包含文件名和行号
-	e = newParseError("main.go", 1)
+	e = newParseError("server.go", 1)
 
 	// 通过error接口查看错误描述
 	fmt.Println(e.Error())

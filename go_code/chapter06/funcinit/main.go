@@ -20,7 +20,7 @@ func init() {
 }
 
 func main() {
-	fmt.Println("main()...age=", age) //3
+	fmt.Println("server()...age=", age) //3
 	fmt.Println("Age=", utils.Age, "Name=", utils.Name)
 
 }

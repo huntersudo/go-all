@@ -28,7 +28,7 @@ func main() {
 		}
 	}()
 
-	// Printer (in main goroutine)
+	// Printer (in server goroutine)
 	for {
 		fmt.Println(<-squares)
 	}

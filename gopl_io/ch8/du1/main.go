@@ -3,7 +3,7 @@
 
 // See page 247.
 
-//!+main
+//!+server
 
 // The du1 command computes the disk usage of the files in a directory.
 package main
@@ -46,7 +46,7 @@ func printDiskUsage(nfiles, nbytes int64) {
 	fmt.Printf("%d files  %.1f GB\n", nfiles, float64(nbytes)/1e9)
 }
 
-//!-main
+//!-server
 
 //!+walkDir
 

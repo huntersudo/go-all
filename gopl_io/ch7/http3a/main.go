@@ -16,10 +16,10 @@ import (
 func main() {
 	db := database{"shoes": 50, "socks": 5}
 	mux := http.NewServeMux()
-	//!+main
+	//!+server
 	mux.HandleFunc("/list", db.list)
 	mux.HandleFunc("/price", db.price)
-	//!-main
+	//!-server
 	log.Fatal(http.ListenAndServe("localhost:8000", mux))
 }
 

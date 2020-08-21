@@ -46,11 +46,11 @@ func crawl(url string) []string {
 
 //!-crawl
 
-//!+main
+//!+server
 func main() {
 	// Crawl the web breadth-first,
 	// starting from the command-line arguments.
 	breadthFirst(crawl, os.Args[1:])
 }
 
-//!-main
+//!-server

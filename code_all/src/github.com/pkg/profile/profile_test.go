@@ -28,11 +28,11 @@ func TestProfile(t *testing.T) {
 	}{{
 		name: "default profile (cpu)",
 		code: `
-package main
+package server
 
 import "github.com/pkg/profile"
 
-func main() {
+func server() {
 	defer profile.Start().Stop()
 }	
 `,
@@ -44,11 +44,11 @@ func main() {
 	}, {
 		name: "memory profile",
 		code: `
-package main
+package server
 
 import "github.com/pkg/profile"
 
-func main() {
+func server() {
 	defer profile.Start(profile.MemProfile).Stop()
 }	
 `,
@@ -60,11 +60,11 @@ func main() {
 	}, {
 		name: "memory profile (rate 2048)",
 		code: `
-package main
+package server
 
 import "github.com/pkg/profile"
 
-func main() {
+func server() {
 	defer profile.Start(profile.MemProfileRate(2048)).Stop()
 }	
 `,
@@ -76,11 +76,11 @@ func main() {
 	}, {
 		name: "double start",
 		code: `
-package main
+package server
 
 import "github.com/pkg/profile"
 
-func main() {
+func server() {
 	profile.Start()
 	profile.Start()
 }	
@@ -93,11 +93,11 @@ func main() {
 	}, {
 		name: "block profile",
 		code: `
-package main
+package server
 
 import "github.com/pkg/profile"
 
-func main() {
+func server() {
 	defer profile.Start(profile.BlockProfile).Stop()
 }	
 `,
@@ -109,11 +109,11 @@ func main() {
 	}, {
 		name: "mutex profile",
 		code: `
-package main
+package server
 
 import "github.com/pkg/profile"
 
-func main() {
+func server() {
 	defer profile.Start(profile.MutexProfile).Stop()
 }
 `,
@@ -125,11 +125,11 @@ func main() {
 	}, {
 		name: "profile path",
 		code: `
-package main
+package server
 
 import "github.com/pkg/profile"
 
-func main() {
+func server() {
 	defer profile.Start(profile.ProfilePath(".")).Stop()
 }	
 `,
@@ -141,11 +141,11 @@ func main() {
 	}, {
 		name: "profile path error",
 		code: `
-package main
+package server
 
 import "github.com/pkg/profile"
 
-func main() {
+func server() {
 		defer profile.Start(profile.ProfilePath("` + f.Name() + `")).Stop()
 }	
 `,
@@ -157,11 +157,11 @@ func main() {
 	}, {
 		name: "multiple profile sessions",
 		code: `
-package main
+package server
 
 import "github.com/pkg/profile"
 
-func main() {
+func server() {
 	profile.Start(profile.CPUProfile).Stop()
 	profile.Start(profile.MemProfile).Stop()
 	profile.Start(profile.BlockProfile).Stop()
@@ -186,11 +186,11 @@ func main() {
 	}, {
 		name: "profile quiet",
 		code: `
-package main
+package server
 
 import "github.com/pkg/profile"
 
-func main() {
+func server() {
         defer profile.Start(profile.Quiet).Stop()
 }       
 `,
@@ -316,7 +316,7 @@ func runTest(t *testing.T, code string) ([]byte, []byte, error) {
 	srcdir := filepath.Join(gopath, "ch")
 	err = os.Mkdir(srcdir, 0755)
 	chk(err)
-	src := filepath.Join(srcdir, "main.go")
+	src := filepath.Join(srcdir, "server.go")
 	err = ioutil.WriteFile(src, []byte(code), 0644)
 	chk(err)
 

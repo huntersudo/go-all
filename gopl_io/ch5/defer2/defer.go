@@ -35,17 +35,17 @@ func f(x int) {
 /*
 //!+printstack
 goroutine 1 [running]:
-main.printStack()
-	src/gopl.io/ch5/defer2/defer.go:20
-main.f(0)
-	src/gopl.io/ch5/defer2/defer.go:27
-main.f(1)
-	src/gopl.io/ch5/defer2/defer.go:29
-main.f(2)
-	src/gopl.io/ch5/defer2/defer.go:29
-main.f(3)
-	src/gopl.io/ch5/defer2/defer.go:29
-main.main()
-	src/gopl.io/ch5/defer2/defer.go:15
+server.printStack()
+	server/gopl.io/ch5/defer2/defer.go:20
+server.f(0)
+	server/gopl.io/ch5/defer2/defer.go:27
+server.f(1)
+	server/gopl.io/ch5/defer2/defer.go:29
+server.f(2)
+	server/gopl.io/ch5/defer2/defer.go:29
+server.f(3)
+	server/gopl.io/ch5/defer2/defer.go:29
+server.server()
+	server/gopl.io/ch5/defer2/defer.go:15
 //!-printstack
 */

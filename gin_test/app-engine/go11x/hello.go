@@ -19,6 +19,8 @@ func main() {
 	// Starts a new Gin instance with no middle-ware
 	r := gin.New()
 
+	//gin.SetMode(gin.ReleaseMode)
+
 	// Define handlers
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "Hello World!")

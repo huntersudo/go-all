@@ -40,11 +40,11 @@ func main() {
 		os.Exit(1)
 	}
 	url := os.Args[1]
-	//!+main
-	// (In function main.)
+	//!+server
+	// (In function server.)
 	if err := WaitForServer(url); err != nil {
 		fmt.Fprintf(os.Stderr, "Site is down: %v\n", err)
 		os.Exit(1)
 	}
-	//!-main
+	//!-server
 }

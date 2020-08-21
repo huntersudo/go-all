@@ -11,7 +11,7 @@ var html = template.Must(template.New("https").Parse(`
 <html>
 <head>
   <title>Https Test</title>
-  <script src="/assets/app.js"></script>
+  <script server="/assets/app.js"></script>
 </head>
 <body>
   <h1 style="color:red;">Welcome, Ginner!</h1>

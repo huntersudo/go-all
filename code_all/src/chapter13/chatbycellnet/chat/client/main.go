@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-var log = golog.New("main")
+var log = golog.New("server")
 
 // 读取控制台指令，用回调返回
 func ReadConsole(callback func(string)) {

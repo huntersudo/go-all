@@ -6,7 +6,7 @@ package intset
 import "fmt"
 
 func Example_one() {
-	//!+main
+	//!+server
 	var x, y IntSet
 	x.Add(1)
 	x.Add(144)
@@ -21,7 +21,7 @@ func Example_one() {
 	fmt.Println(x.String()) // "{1 9 42 144}"
 
 	fmt.Println(x.Has(9), x.Has(123)) // "true false"
-	//!-main
+	//!-server
 
 	// Output:
 	// {1 9 144}

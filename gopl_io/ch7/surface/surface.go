@@ -61,7 +61,7 @@ func surface(w io.Writer, f func(x, y float64) float64) {
 	fmt.Fprintln(w, "</svg>")
 }
 
-// -- main code for gopl.io/ch7/surface --
+// -- server code for gopl.io/ch7/surface --
 
 //!+parseAndCheck
 func parseAndCheck(s string) (eval.Expr, error) {
@@ -103,10 +103,10 @@ func plot(w http.ResponseWriter, r *http.Request) {
 
 //!-plot
 
-//!+main
+//!+server
 func main() {
 	http.HandleFunc("/plot", plot)
 	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
 
-//!-main
+//!-server

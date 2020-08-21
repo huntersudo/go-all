@@ -51,8 +51,8 @@ func main() {
 
 	var p Person
 	p.Name = "tom"
-	p.test()                              //调用方法
-	fmt.Println("main() p.Name=", p.Name) //输出 tom
+	p.test()                                //调用方法
+	fmt.Println("server() p.Name=", p.Name) //输出 tom
 	//下面的使用方式都是错误的
 	// var dog Dog
 	// dog.test()

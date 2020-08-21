@@ -22,14 +22,14 @@ func main() {
 
 	//使用的反引号 ``
 	str3 := ` 
-	package main
+	package server
 	import (
 		"fmt"
 		"unsafe"
 	)
 	
 	//演示golang中bool类型使用
-	func main() {
+	func server() {
 		var b = false
 		fmt.Println("b=", b)
 		//注意事项

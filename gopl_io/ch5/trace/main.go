@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-//!+main
+//!+server
 func bigSlowOperation() {
 	defer trace("bigSlowOperation")() // don't forget the extra parentheses
 	// ...lots of work...
@@ -24,7 +24,7 @@ func trace(msg string) func() {
 	return func() { log.Printf("exit %s (%s)", msg, time.Since(start)) }
 }
 
-//!-main
+//!-server
 
 func main() {
 	bigSlowOperation()

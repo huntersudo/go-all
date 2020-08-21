@@ -75,7 +75,7 @@ func clientWriter(conn net.Conn, ch <-chan string) {
 
 //!-handleConn
 
-//!+main
+//!+server
 func main() {
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
@@ -93,4 +93,4 @@ func main() {
 	}
 }
 
-//!-main
+//!-server

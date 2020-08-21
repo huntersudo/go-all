@@ -49,12 +49,12 @@ func main() {
 	//测试
 	// test()
 	// for {
-	// 	fmt.Println("main()下面的代码...")
+	// 	fmt.Println("server()下面的代码...")
 	// 	time.Sleep(time.Second)
 	// }
 
 	//测试自定义错误的使用
 
 	test02()
-	fmt.Println("main()下面的代码...")
+	fmt.Println("server()下面的代码...")
 }

@@ -45,7 +45,7 @@ func main() {
 		}()
 	}
 
-	// The main goroutine de-duplicates worklist items
+	// The server goroutine de-duplicates worklist items
 	// and sends the unseen ones to the crawlers.
 	seen := make(map[string]bool)
 	for list := range worklist {

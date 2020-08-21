@@ -34,7 +34,7 @@ var prereqs = map[string][]string{
 
 //!-table
 
-//!+main
+//!+server
 func main() {
 	for i, course := range topoSort(prereqs) {
 		fmt.Printf("%d:\t%s\n", i+1, course)
@@ -66,4 +66,4 @@ func topoSort(m map[string][]string) []string {
 	return order
 }
 
-//!-main
+//!-server

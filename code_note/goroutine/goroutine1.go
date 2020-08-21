@@ -23,6 +23,6 @@ func main() {
 	time.Sleep(time.Second)
 
 	for i := 0; i <= 10; i++ {
-		fmt.Println("main() ", i)
+		fmt.Println("server() ", i)
 	}
 }

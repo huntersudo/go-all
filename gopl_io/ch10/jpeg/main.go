@@ -3,7 +3,7 @@
 
 // See page 287.
 
-//!+main
+//!+server
 
 // The jpeg command reads a PNG image from the standard input
 // and writes it as a JPEG image to the standard output.
@@ -34,7 +34,7 @@ func toJPEG(in io.Reader, out io.Writer) error {
 	return jpeg.Encode(out, img, &jpeg.Options{Quality: 95})
 }
 
-//!-main
+//!-server
 
 /*
 //!+with

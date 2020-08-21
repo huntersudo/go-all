@@ -2,7 +2,7 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 122.
-//!+main
+//!+server
 
 // Findlinks1 prints the links in an HTML document read from standard input.
 package main
@@ -25,7 +25,7 @@ func main() {
 	}
 }
 
-//!-main
+//!-server
 
 //!+visit
 // visit appends to links each link found in n and returns the result.

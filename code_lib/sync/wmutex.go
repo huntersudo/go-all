@@ -26,7 +26,7 @@ func main() {
 
 	wg.Wait()
 
-	fmt.Println("main 执行完毕")
+	fmt.Println("server 执行完毕")
 }
 
 func Room(name int) {
@@ -50,4 +50,4 @@ func Room(name int) {
 // 2 已经离开房间
 // 1 已经进去房间.....
 // 1 已经离开房间
-// main 执行完毕
+// server 执行完毕

@@ -29,7 +29,7 @@ type D struct {
 //	fmt.Println("Eat() ....")
 //}
 
-//func main() {
+//func server() {
 
 //	var d D
 //	var c C = d

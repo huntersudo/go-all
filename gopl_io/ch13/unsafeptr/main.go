@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	//!+main
+	//!+server
 	var x struct {
 		a bool
 		b int16
@@ -25,7 +25,7 @@ func main() {
 	*pb = 42
 
 	fmt.Println(x.b) // "42"
-	//!-main
+	//!-server
 }
 
 /*

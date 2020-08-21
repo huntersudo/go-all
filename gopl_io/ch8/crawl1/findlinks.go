@@ -31,7 +31,7 @@ func crawl(url string) []string {
 
 //!-crawl
 
-//!+main
+//!+server
 func main() {
 	worklist := make(chan []string)
 
@@ -52,7 +52,7 @@ func main() {
 	}
 }
 
-//!-main
+//!-server
 
 /*
 //!+output

@@ -4,7 +4,7 @@ import (
 	_ "fmt" //如果我们没有使用到一个包，但是有想去掉，前面加一个 _ 表示忽略
 )
 
-//func main() {
+//func server() {
 
 //课堂练习 , tab键
 // var n1 int32 = 12

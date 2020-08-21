@@ -20,11 +20,11 @@ func sum(vals ...int) int {
 //!-
 
 func main() {
-	//!+main
+	//!+server
 	fmt.Println(sum())           //  "0"
 	fmt.Println(sum(3))          //  "3"
 	fmt.Println(sum(1, 2, 3, 4)) //  "10"
-	//!-main
+	//!-server
 
 	//!+slice
 	values := []int{1, 2, 3, 4}

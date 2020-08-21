@@ -50,10 +50,10 @@ func main() {
 
 	// arr := [3]int{11, 22, 33}
 	// test01(arr)
-	// fmt.Println("main arr=", arr) //
+	// fmt.Println("server arr=", arr) //
 
 	arr := [3]int{11, 22, 33}
 	fmt.Printf("arr 的地址=%p", &arr)
 	test02(&arr)
-	fmt.Println("main arr=", arr)
+	fmt.Println("server arr=", arr)
 }

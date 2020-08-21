@@ -35,7 +35,7 @@ func (p *Point) ScaleBy(factor float64) {
 }
 
 func main() {
-	//!+main
+	//!+server
 	red := color.RGBA{255, 0, 0, 255}
 	blue := color.RGBA{0, 0, 255, 255}
 	var p = ColoredPoint{Point{1, 1}, red}
@@ -44,7 +44,7 @@ func main() {
 	p.ScaleBy(2)
 	q.ScaleBy(2)
 	fmt.Println(p.Distance(q.Point)) // "10"
-	//!-main
+	//!-server
 }
 
 /*

@@ -3,7 +3,7 @@
 
 // Run with "web" command-line argument for web server.
 // See page 13.
-//!+main
+//!+server
 
 // Lissajous generates GIF animations of random Lissajous figures.
 package main
@@ -18,7 +18,7 @@ import (
 	"os"
 )
 
-//!-main
+//!-server
 // Packages not needed by version in book.
 import (
 	"log"
@@ -26,7 +26,7 @@ import (
 	"time"
 )
 
-//!+main
+//!+server
 
 var palette = []color.Color{color.White, color.Black}
 
@@ -36,7 +36,7 @@ const (
 )
 
 func main() {
-	//!-main
+	//!-server
 	// The sequence of images is deterministic unless we seed
 	// the pseudo-random number generator using the current time.
 	// Thanks to Randall McPherson for pointing out the omission.
@@ -52,7 +52,7 @@ func main() {
 		log.Fatal(http.ListenAndServe("localhost:8000", nil))
 		return
 	}
-	//!+main
+	//!+server
 	lissajous(os.Stdout)
 }
 
@@ -83,4 +83,4 @@ func lissajous(out io.Writer) {
 	gif.EncodeAll(out, &anim) // NOTE: ignoring encoding errors
 }
 
-//!-main
+//!-server

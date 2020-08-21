@@ -13,7 +13,7 @@ import (
 	"net/http"
 )
 
-//!+main
+//!+server
 
 func main() {
 	db := database{"shoes": 50, "socks": 5}
@@ -22,7 +22,7 @@ func main() {
 	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
 
-//!-main
+//!-server
 
 type dollars float32
 

@@ -12,7 +12,7 @@ import (
 	"net/http"
 )
 
-//!+main
+//!+server
 
 func main() {
 	db := database{"shoes": 50, "socks": 5}
@@ -31,7 +31,7 @@ func (db database) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-//!-main
+//!-server
 
 /*
 //!+handler

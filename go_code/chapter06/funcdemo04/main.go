@@ -30,10 +30,10 @@ func test03(n1 *int) {
 func main() {
 	// num := 20
 	// test02(num)
-	// fmt.Println("main() num= ", num)
+	// fmt.Println("server() num= ", num)
 
 	num := 20
 	fmt.Printf("num的地址=%v\n", &num)
 	test03(&num)
-	fmt.Println("main() num= ", num) // 30
+	fmt.Println("server() num= ", num) // 30
 }

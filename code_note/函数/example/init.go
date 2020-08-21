@@ -1,5 +1,5 @@
 //每个go文件都又严格init方法
-//执行顺序；全局变量 > init() > main()
+//执行顺序；全局变量 > init() > server()
 
 package main
 
@@ -18,10 +18,10 @@ func init() {
 }
 
 func main() {
-	fmt.Println("main", g)
+	fmt.Println("server", g)
 }
 
 //output:
 //全局变量
 //init
-//main 1
+//server 1

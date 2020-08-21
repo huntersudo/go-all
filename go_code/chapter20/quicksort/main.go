@@ -75,7 +75,7 @@ func main() {
 	//调用快速排序
 	QuickSort(0, len(arr)-1, &arr)
 	end := time.Now().Unix()
-	fmt.Println("main..")
+	fmt.Println("server..")
 	fmt.Printf("快速排序法耗时%d秒", end-start)
 	//fmt.Println(arr)
 

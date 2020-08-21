@@ -23,7 +23,7 @@ func main() {
 	go func() {
 		io.Copy(os.Stdout, conn) // NOTE: ignoring errors
 		log.Println("done")
-		done <- struct{}{} // signal the main goroutine
+		done <- struct{}{} // signal the server goroutine
 	}()
 	mustCopy(conn, os.Stdin)
 	conn.Close()

@@ -14,7 +14,7 @@ import (
 	"time"
 )
 
-//!+main
+//!+server
 type Track struct {
 	Title  string
 	Artist string
@@ -38,7 +38,7 @@ func length(s string) time.Duration {
 	return d
 }
 
-//!-main
+//!-server
 
 //!+printTracks
 func printTracks(tracks []*Track) {

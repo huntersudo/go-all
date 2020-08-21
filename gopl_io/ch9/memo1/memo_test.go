@@ -50,16 +50,16 @@ $ go test -run=TestConcurrent -race -v gopl.io/ch9/memo1
 WARNING: DATA RACE
 Write by goroutine 36:
   runtime.mapassign1()
-      ~/go/src/runtime/hashmap.go:411 +0x0
+      ~/go/server/runtime/hashmap.go:411 +0x0
   gopl.io/ch9/memo1.(*Memo).Get()
-      ~/gobook2/src/gopl.io/ch9/memo1/memo.go:32 +0x205
+      ~/gobook2/server/gopl.io/ch9/memo1/memo.go:32 +0x205
   ...
 
 Previous write by goroutine 35:
   runtime.mapassign1()
-      ~/go/src/runtime/hashmap.go:411 +0x0
+      ~/go/server/runtime/hashmap.go:411 +0x0
   gopl.io/ch9/memo1.(*Memo).Get()
-      ~/gobook2/src/gopl.io/ch9/memo1/memo.go:32 +0x205
+      ~/gobook2/server/gopl.io/ch9/memo1/memo.go:32 +0x205
 ...
 Found 1 data race(s)
 FAIL	gopl.io/ch9/memo1	2.393s

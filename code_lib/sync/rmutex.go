@@ -26,7 +26,7 @@ func main() {
 
 	wg.Wait()
 
-	fmt.Println("main 结束...")
+	fmt.Println("server 结束...")
 }
 
 func readData(name int) {
@@ -54,4 +54,4 @@ func readData(name int) {
 // 2 正在读数据
 // 2 数据读完
 // 1 数据读完
-// main 结束...
+// server 结束...
