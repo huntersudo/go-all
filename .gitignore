@@ -3,6 +3,9 @@ target/
 logs/
 *.pyc
 
+pkg
+*.exe
+
 *.lock
 # Log file
 *.png
