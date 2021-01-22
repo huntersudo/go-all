@@ -14,3 +14,6 @@ func main() {
 }
 
 //!-
+/**
+go get golang.org/x/tools/cmd/goimports
+*/
