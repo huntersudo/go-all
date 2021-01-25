@@ -12,6 +12,21 @@ import (
 	"net/http"
 )
 
+//GET /?q=query HTTP/1.1
+//Header["Sec-Fetch-Dest"] = ["document"]
+//Header["Connection"] = ["keep-alive"]
+//Header["User-Agent"] = ["Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36"]
+//Header["Accept"] = ["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"]
+//Header["Sec-Fetch-Site"] = ["none"]
+//Header["Sec-Fetch-Mode"] = ["navigate"]
+//Header["Sec-Fetch-User"] = ["?1"]
+//Header["Upgrade-Insecure-Requests"] = ["1"]
+//Header["Accept-Encoding"] = ["gzip, deflate, br"]
+//Header["Accept-Language"] = ["zh-CN,zh;q=0.9"]
+//Host = "localhost:8000"
+//RemoteAddr = "127.0.0.1:52777"
+//Form["q"] = ["query"]
+
 func main() {
 	http.HandleFunc("/", handler)
 	log.Fatal(http.ListenAndServe("localhost:8000", nil))

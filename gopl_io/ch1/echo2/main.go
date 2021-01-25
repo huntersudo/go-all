@@ -18,7 +18,17 @@ func main() {
 		s += sep + arg
 		sep = " "
 	}
+
+	// C:\Users\desktop-huntersudo\AppData\Local\Temp\___8go_build_gopl_io_ch1_echo2.exe
+	// 执⾏命令本身的名字
+	fmt.Println(os.Args[0])
 	fmt.Println(s)
+	fmt.Println(len(s))
+
+	for index, value := range os.Args[1:] {
+		fmt.Println(index, ":", value)
+	}
+
 }
 
 //!-
