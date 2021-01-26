@@ -7,6 +7,8 @@
 
 package tempconv
 
+// 类型转换不会改变值本身, 但是会使它们的语义发⽣变化
+// 这些转换 只改变类型 而不会影响值本身
 // CToF converts a Celsius temperature to Fahrenheit.
 func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9/5 + 32) }
 

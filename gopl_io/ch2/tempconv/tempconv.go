@@ -8,6 +8,7 @@ package tempconv
 
 import "fmt"
 
+// type 类型名字 底层类型
 type Celsius float64
 type Fahrenheit float64
 

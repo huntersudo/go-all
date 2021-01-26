@@ -7,6 +7,7 @@ import "fmt"
 
 func Example_one() {
 	{
+		// Celsius 和Fahrenheit类型的算术运算⾏为和底层的float64类型是⼀样的
 		//!+arith
 		fmt.Printf("%g\n", BoilingC-FreezingC) // "100" °C
 		boilingF := CToF(BoilingC)
