@@ -13,6 +13,7 @@ import (
 )
 
 //!+
+//  omitempt 选项，表示当Go语⾔结构体成员为空或零值时不⽣成该JSON对象（这⾥false为零值）
 type Movie struct {
 	Title  string
 	Year   int  `json:"released"`
@@ -35,6 +36,7 @@ var movies = []Movie{
 func main() {
 	{
 		//!+Marshal
+		// 不带缩进
 		data, err := json.Marshal(movies)
 		if err != nil {
 			log.Fatalf("JSON marshaling failed: %s", err)
@@ -45,6 +47,7 @@ func main() {
 
 	{
 		//!+MarshalIndent
+		// 带缩进
 		data, err := json.MarshalIndent(movies, "", "    ")
 		if err != nil {
 			log.Fatalf("JSON marshaling failed: %s", err)

@@ -50,3 +50,30 @@ func main() {
 }
 
 //!-
+/*
+//$ go build gopl.io/ch4/issueshtml
+//$ ./issueshtml repo:golang/go is:open json decoder
+<h1>57 issues</h1>
+<table>
+<tr style='text-align: left'>
+  <th>#</th>
+  <th>State</th>
+  <th>User</th>
+  <th>Title</th>
+</tr>
+
+<tr>
+  <td><a href='https://github.com/golang/go/pull/43716'>43716</a></td>
+  <td>open</td>
+  <td><a href='https://github.com/ggaaooppeenngg'>ggaaooppeenngg</a></td>
+  <td><a href='https://github.com/golang/go/pull/43716'>encoding/json: fix byte counter increments when using decoder.Token()</a></td>
+</tr>
+
+<tr>
+  <td><a href='https://github.com/golang/go/pull/33416'>33416</a></td>
+  <td>open</td>
+  <td><a href='https://github.com/bserdar'>bserdar</a></td>
+  <td><a href='https://github.com/golang/go/pull/33416'>encoding/json: This CL adds Decoder.InternKeys</a></td>
+</tr>
+
+*/
