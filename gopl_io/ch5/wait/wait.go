@@ -36,6 +36,8 @@ func WaitForServer(url string) error {
 
 func main() {
 	if len(os.Args) != 2 {
+		fmt.Println(len(os.Args))
+		// 输出错误信息 并退出
 		fmt.Fprintf(os.Stderr, "usage: wait url\n")
 		os.Exit(1)
 	}
@@ -43,7 +45,14 @@ func main() {
 	//!+server
 	// (In function server.)
 	if err := WaitForServer(url); err != nil {
+		// 标准错误流
+		// Site is down: server ab failed to respond after 1m0s
 		fmt.Fprintf(os.Stderr, "Site is down: %v\n", err)
+
+		// log 函数
+		// 2021/02/01 20:18:51 Site is down: server ab failed to respond after 1m0s
+		log.Fatalf("Site is down: %v\n", err)
+
 		os.Exit(1)
 	}
 	//!-server
