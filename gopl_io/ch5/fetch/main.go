@@ -29,6 +29,7 @@ func fetch(url string) (filename string, n int64, err error) {
 		local = "index.html"
 	}
 	f, err := os.Create(local)
+	//defer f.Close()
 	if err != nil {
 		return "", 0, err
 	}
