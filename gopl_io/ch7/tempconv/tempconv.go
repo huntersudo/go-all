@@ -38,7 +38,10 @@ type celsiusFlag struct{ Celsius }
 func (f *celsiusFlag) Set(s string) error {
 	var unit string
 	var value float64
+
+	// 调⽤fmt.Sscanf函数从输⼊s中解析⼀个浮点数（value）和⼀个字符串（unit）
 	fmt.Sscanf(s, "%f%s", &value, &unit) // no error check needed
+
 	switch unit {
 	case "C", "°C":
 		f.Celsius = Celsius(value)
@@ -47,6 +50,7 @@ func (f *celsiusFlag) Set(s string) error {
 		f.Celsius = FToC(Fahrenheit(value))
 		return nil
 	}
+
 	return fmt.Errorf("invalid temperature %q", s)
 }
 

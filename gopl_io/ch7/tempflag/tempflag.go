@@ -22,3 +22,15 @@ func main() {
 }
 
 //!-
+
+// ./tempflag -temp -18C
+// ./tempflag -temp 273.15K
+// ./tempflag -temp 212°F
+/**
+$ ./tempflag -temp 273.15K
+invalid value "273.15K" for flag -temp: invalid temperature "273.15K"
+Usage of C:\Users\desktop-huntersudo\AppData\Local\Temp\___go_build_gopl_io_ch7_tempflag.exe:
+  -temp value
+    	the temperature (default 20°C)
+
+*/
