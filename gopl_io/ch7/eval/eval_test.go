@@ -36,6 +36,7 @@ func TestEval(t *testing.T) {
 			fmt.Printf("\n%s\n", test.expr)
 			prevExpr = test.expr
 		}
+		// Parse parses the input string as an arithmetic expression.
 		expr, err := Parse(test.expr)
 		if err != nil {
 			t.Error(err) // parse error
