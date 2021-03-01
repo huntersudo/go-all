@@ -44,3 +44,11 @@ func main() {
 func launch() {
 	fmt.Println("Lift off!")
 }
+
+/**
+
+Commencing countdown.  Press return to abort.
+d
+Launch aborted!
+
+*/

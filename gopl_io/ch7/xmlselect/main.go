@@ -32,6 +32,7 @@ func main() {
 		case xml.EndElement:
 			stack = stack[:len(stack)-1] // pop
 		case xml.CharData:
+			// 当xmlselect遇到⼀个CharData时，只有当栈中有序地包含所有通过命令⾏参数传⼊的元素名 称时，它才会输出相应的⽂本。
 			if containsAll(stack, os.Args[1:]) {
 				fmt.Printf("%s: %s\n", strings.Join(stack, " "), tok)
 			}
