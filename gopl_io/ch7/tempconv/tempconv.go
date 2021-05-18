@@ -17,6 +17,11 @@ type Fahrenheit float64
 func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9.0/5.0 + 32.0) }
 func FToC(f Fahrenheit) Celsius { return Celsius((f - 32.0) * 5.0 / 9.0) }
 
+/**
+type Stringer interface {
+	String() string
+}
+ */
 func (c Celsius) String() string { return fmt.Sprintf("%g°C", c) }
 
 /*
@@ -31,6 +36,7 @@ type Value interface {
 //!-flagvalue
 */
 
+// 注意celsiusFlag内嵌了⼀个 Celsius类型（§2.5），因此不⽤实现本身就已经有String⽅法了
 //!+celsiusFlag
 // *celsiusFlag satisfies the flag.Value interface.
 type celsiusFlag struct{ Celsius }
@@ -59,7 +65,7 @@ func (f *celsiusFlag) Set(s string) error {
 // The flag argument must have a quantity and a unit, e.g., "100C".
 func CelsiusFlag(name string, value Celsius, usage string) *Celsius {
 	f := celsiusFlag{value}
-	flag.CommandLine.Var(&f, name, usage)
+	flag.CommandLine.Var(&f, name, usage)  // todo 待仔细研究
 	return &f.Celsius
 }
 

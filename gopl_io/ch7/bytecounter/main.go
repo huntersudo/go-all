@@ -11,7 +11,9 @@ import (
 )
 
 //!+bytecounter
-
+// 接口是合约
+// 实现某个接口
+// 满足某个接口
 type ByteCounter int
 
 func (c *ByteCounter) Write(p []byte) (int, error) {
