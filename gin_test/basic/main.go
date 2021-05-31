@@ -41,17 +41,17 @@ func setupRouter() *gin.Engine {
 		"manu": "123", // user:manu password:123
 	}))
 
-	authorized.POST("admin", func(c *gin.Context) {
-		user := c.MustGet(gin.AuthUserKey).(string)
+	authorized.POST("admin", func(context *gin.Context) {
+		user := context.MustGet(gin.AuthUserKey).(string)
 
 		// Parse JSON
 		var json struct {
 			Value string `json:"value" binding:"required"`
 		}
 
-		if c.Bind(&json) == nil {
+		if context.Bind(&json) == nil {
 			db[user] = json.Value
-			c.JSON(http.StatusOK, gin.H{"status": "ok"})
+			context.JSON(http.StatusOK, gin.H{"status": "ok"})
 		}
 	})
 
