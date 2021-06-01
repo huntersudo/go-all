@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	// EqualFold(s1, s2) 字符串的比较。比较s1和s2是否相等，不区分大小写
+	// EqualFold(s1, s2.go) 字符串的比较。比较s1和s2是否相等，不区分大小写
 	fmt.Println("两个字符串的比较：", strings.EqualFold("Go", "go")) // true
 
 	// HasPrefix(s, prefix) 判断字符串s的前缀（第一个字符）是不是prefix。注意：区分大小写
