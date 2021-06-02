@@ -67,6 +67,8 @@ func (memo *Memo) server(f Func) {
 			cache[req.key] = e
 			go e.call(f, req.key) // call f(key)
 		}
+		// 紧接着对同⼀个key的请求会发现map中已经有了存在的条⽬，然后会等待结果变为ready，
+		// 并将结果从response发送给 客户端的goroutien。
 		go e.deliver(req.response)
 	}
 }

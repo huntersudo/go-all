@@ -22,6 +22,9 @@ func (d dollars) String() string { return fmt.Sprintf("$%.2f", d) }
 func main() {
 	db := database{"shoes": 50, "socks": 5}
 	mux := http.NewServeMux()
+	// 因此HandlerFunc是⼀个让函数值满⾜⼀个接⼝的适配器
+	// 这个技巧让⼀个单⼀的类型例如database以多种⽅式满⾜ http.Handler接⼝
+	// ：⼀种通过它的list⽅法，⼀种通过它的price⽅法等等
 	mux.Handle("/list", http.HandlerFunc(db.list))
 	mux.Handle("/price", http.HandlerFunc(db.price))
 	log.Fatal(http.ListenAndServe("localhost:8000", mux))

@@ -27,6 +27,7 @@ func echo(c net.Conn, shout string, delay time.Duration) {
 func handleConn(c net.Conn) {
 	input := bufio.NewScanner(c)
 	for input.Scan() {
+		// reverb2 set go channel
 		echo(c, input.Text(), 1*time.Second)
 	}
 	// NOTE: ignoring potential errors from input.Err()
@@ -35,13 +36,14 @@ func handleConn(c net.Conn) {
 
 //!-
 
+// 升级我们的客户端程序，这样它就可以发送终端的输⼊到服务器，并把服务端的返回输出到终端上，
 func main() {
-	l, err := net.Listen("tcp", "localhost:8000")
+	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
 		log.Fatal(err)
 	}
 	for {
-		conn, err := l.Accept()
+		conn, err := listener.Accept()
 		if err != nil {
 			log.Print(err) // e.g., connection aborted
 			continue

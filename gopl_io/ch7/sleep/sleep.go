@@ -23,3 +23,7 @@ func main() {
 }
 
 //!-sleep
+
+//$ ./sleep -period 2m30s
+//$ ./sleep -period 1.5h
+//$ ./sleep -period "1 day"

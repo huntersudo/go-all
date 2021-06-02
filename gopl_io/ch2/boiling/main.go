@@ -9,9 +9,11 @@ package main
 
 import "fmt"
 
+// 包⼀级范围
 const boilingF = 212.0
 
 func main() {
+	// 函数内部的名字则必须先声明之后才能使⽤
 	var f = boilingF
 	var c = (f - 32) * 5 / 9
 	fmt.Printf("boiling point = %g°F or %g°C\n", f, c)

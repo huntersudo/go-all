@@ -20,6 +20,7 @@ func main() {
 		log.Fatal(err)
 	}
 	defer conn.Close()
+	// 升级我们的客户端程序，这样它就可以发送终端的输⼊到服务器，并把服务端的返回输出到终端上，
 	go mustCopy(os.Stdout, conn)
 	mustCopy(conn, os.Stdin)
 }

@@ -17,6 +17,7 @@ import (
 
 //!+
 func main() {
+	fmt.Println("args:", os.Args[1:])
 	result, err := github.SearchIssues(os.Args[1:])
 	if err != nil {
 		log.Fatal(err)
@@ -34,6 +35,7 @@ func main() {
 //!+textoutput
 $ go build gopl.io/ch4/issues
 $ ./issues repo:golang/go is:open json decoder
+
 13 issues:
 #5680    eaigner encoding/json: set key converter on en/decoder
 #6050  gopherbot encoding/json: provide tokenizer

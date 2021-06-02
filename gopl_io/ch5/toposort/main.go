@@ -44,8 +44,9 @@ func main() {
 func topoSort(m map[string][]string) []string {
 	var order []string
 	seen := make(map[string]bool)
-	var visitAll func(items []string)
 
+	// 当匿名函数需要被递归调⽤时，我们必须⾸先声明⼀个变量
+	var visitAll func(items []string)
 	visitAll = func(items []string) {
 		for _, item := range items {
 			if !seen[item] {

@@ -25,6 +25,7 @@ func handleConn(c net.Conn) {
 }
 
 func main() {
+	// tcp server
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
 		log.Fatal(err)

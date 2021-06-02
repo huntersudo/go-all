@@ -31,6 +31,13 @@ func (db database) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
+/**
+
+shoes: $50.00
+socks: $5.00
+
+
+*/
 //!-server
 
 /*

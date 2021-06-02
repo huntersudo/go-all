@@ -34,6 +34,7 @@ func (db database) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		item := req.URL.Query().Get("item")
 		price, ok := db[item]
 		if !ok {
+			// 通过调⽤w.WriteHeader(http.StatusNotFound)返回客户端⼀个HTTP错误
 			w.WriteHeader(http.StatusNotFound) // 404
 			fmt.Fprintf(w, "no such item: %q\n", item)
 			return
@@ -44,5 +45,13 @@ func (db database) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		fmt.Fprintf(w, "no such page: %s\n", req.URL)
 	}
 }
+
+/**
+localhost:8000/price?item=socks1
+no such item: "socks1"
+
+
+
+*/
 
 //!-handler

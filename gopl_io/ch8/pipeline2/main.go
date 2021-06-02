@@ -23,6 +23,7 @@ func main() {
 
 	// Squarer
 	go func() {
+		// range ，它依次从channel接收数据，当channel被关闭并且没有值可接收时跳出循环
 		for x := range naturals {
 			squares <- x * x
 		}

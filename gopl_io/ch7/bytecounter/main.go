@@ -31,7 +31,9 @@ func main() {
 
 	c = 0 // reset the counter
 	var name = "Dolly"
+	// func Fprintf(w io.Writer, format string, args ...interface{}) (int, error)
 	fmt.Fprintf(&c, "hello, %s", name)
+	//
 	fmt.Println(c) // "12", = len("hello, Dolly")
 	//!-server
 }

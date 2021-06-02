@@ -30,6 +30,9 @@ func (l literal) Eval(_ Env) float64 {
 //!-Eval1
 
 //!+Eval2
+/**
+对 Expr 接口的多种实现
+*/
 
 func (u unary) Eval(env Env) float64 {
 	switch u.op {

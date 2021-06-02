@@ -28,3 +28,7 @@ func main() {
 }
 
 //!-
+
+/*
+<p>A: &lt;b&gt;Hello!&lt;/b&gt;</p><p>B: <b>Hello!</b></p>
+*/

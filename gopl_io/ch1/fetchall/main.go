@@ -5,6 +5,12 @@
 //!+
 
 // Fetchall fetches URLs in parallel and reports their times and sizes.
+// io.Copy(dst, src)
+/**
+0.12s       81  http://baidu.com
+0.44s   114397  http://bing.com.cn
+0.44s elapsed
+*/
 package main
 
 import (

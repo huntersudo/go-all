@@ -33,6 +33,16 @@ func TestFrenchPalindrome(t *testing.T) {
 	}
 }
 
+// 发现第⼀个BUG的原因是我们采⽤了 byte⽽不是rune序列，所以 像“été”中的é等⾮ASCII字符不能正确处理
+/**
+=== RUN   TestFrenchPalindrome
+    word_test.go:32: IsPalindrome("été") = false
+--- FAIL: TestFrenchPalindrome (0.00s)
+
+FAIL
+
+*/
+
 func TestCanalPalindrome(t *testing.T) {
 	input := "A man, a plan, a canal: Panama"
 	if !IsPalindrome(input) {
@@ -40,4 +50,11 @@ func TestCanalPalindrome(t *testing.T) {
 	}
 }
 
+/**
+=== RUN   TestCanalPalindrome
+    word_test.go:45: IsPalindrome("A man, a plan, a canal: Panama") = false
+--- FAIL: TestCanalPalindrome (0.00s)
+
+FAIL
+*/
 //!-more
