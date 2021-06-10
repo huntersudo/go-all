@@ -6,6 +6,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"xorm.io/xorm"
+
 )
 
 type User struct {
@@ -18,8 +19,9 @@ type User struct {
 	Updated time.Time `xorm:"updated"`
 }
 
+const ConStr ="sml_user:1qaz@WSX@tcp(192.168.88.128:3306)/sml_db?charset=utf8"
 func main() {
-	engine, err := xorm.NewEngine("mysql", "root:12345@/test?charset=utf8")
+	engine, err := xorm.NewEngine("mysql",ConStr)
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -18,9 +18,11 @@ type User struct {
 	Updated time.Time `xorm:"updated"`
 }
 
+const ConStr ="sml_user:1qaz@WSX@tcp(192.168.88.132:3306)/sml_db?charset=utf8"
 func main() {
-	engine, _ := xorm.NewEngine("mysql", "root:12345@/test?charset=utf8")
+	// Count() ⽅法统计满⾜条件的记录数量：
+	engine, _ := xorm.NewEngine("mysql", ConStr)
 
-	num, _ := engine.Where("age >= ?", 50).Count(&User{})
-	fmt.Printf("there are %d users whose age >= 50", num)
+	num, _ := engine.Where("age >= ?", 10).Count(&User{})
+	fmt.Printf("there are %d users whose age >= 10", num)
 }

@@ -17,9 +17,10 @@ type User struct {
 	Created time.Time `xorm:"created"`
 	Updated time.Time `xorm:"updated"`
 }
+const ConStr ="sml_user:1qaz@WSX@tcp(192.168.88.132:3306)/sml_db?charset=utf8"
 
 func main() {
-	engine, _ := xorm.NewEngine("mysql", "root:12345@/test?charset=utf8")
+	engine, _ := xorm.NewEngine("mysql", ConStr)
 	user := &User{
 		Name: "lzy",
 		Age: 50,
@@ -34,4 +35,21 @@ func main() {
 
 	affected, _ = engine.Insert(&users)
 	fmt.Printf("%d records inserted, id1:%d, id2:%d", affected, users[0].Id, users[1].Id)
-}
+
+	//1 records inserted, user.id:5
+	//2 records inserted, id1:0, id2:0
+	// todo 批量插⼊时，每个对象的 Id 字段不会被⾃动赋值，所以上⾯最后⼀⾏输 出 id1 和 id2 均为 0。
+	//mysql> select * from user;
+	//	+----+-------+------+------+--------+---------------------+---------------------+
+	//	| id | name  | salt | age  | passwd | created             | updated             |
+	//		+----+-------+------+------+--------+---------------------+---------------------+
+	//	|  1 | pipi  |      |   18 |        | 2021-06-10 14:39:48 | 2021-06-10 14:39:48 |
+	//	|  2 | pipi  |      |   18 |        | 2021-06-10 14:47:47 | 2021-06-10 14:47:47 |
+	//	|  3 | pipi2 |      |   20 |        | 2021-06-10 14:48:04 | 2021-06-10 14:48:04 |
+	//	|  4 | pi2   |      |   20 |        | 2021-06-10 14:48:20 | 2021-06-10 14:48:20 |
+	//	|  5 | lzy   |      |   50 |        | 2021-06-10 15:01:57 | 2021-06-10 15:01:57 |
+	//	|  6 | xhq   |      |   41 |        | 2021-06-10 15:01:57 | 2021-06-10 15:01:57 |
+	//	|  7 | lhy   |      |   12 |        | 2021-06-10 15:01:57 | 2021-06-10 15:01:57 |
+	//		+----+-------+------+------+--------+---------------------+---------------------+
+
+	}
