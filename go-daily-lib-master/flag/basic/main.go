@@ -5,6 +5,9 @@ import (
 	"fmt"
 )
 
+//定义⼀些全局变量存储选项的值，如这⾥的 intflag/boolflag/stringflag ；
+//在 init ⽅法中使⽤ flag.TypeVar ⽅法定义选项，这⾥的 Type 可以为基本类型 Int/Uint/Float64/Bool ，还可以是时间 间隔 time.Duration 。定义时传⼊变量的地址、选项名、默认值和帮助信息；
+//在 main ⽅法中调⽤ flag.Parse 从 os.Args[1:] 中解析选项。因为 os.Args[0] 为可执⾏程序路径，会被剔除。
 var (
 	// intflag int
 	// boolflag bool
