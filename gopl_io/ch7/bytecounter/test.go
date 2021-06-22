@@ -22,9 +22,9 @@ import (
 //os.Stdout.Write([]byte("hello")) // OK: *os.File has Write method
 //os.Stdout.Close() // OK: *os.File has Close method
 //
-//var w io.Writer
+//var w io--.Writer
 //w = os.Stdout
-//w.Write([]byte("hello")) // OK: io.Writer has Write method w.Close()
+//w.Write([]byte("hello")) // OK: io--.Writer has Write method w.Close()
 //
 //var any interface{}
 //any = true
@@ -35,7 +35,7 @@ import (
 
 
 
-//var w io.Writer
+//var w io--.Writer
 //w = os.Stdout
 //w = new(bytes.Buffer)
 //w = nil

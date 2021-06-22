@@ -10,7 +10,7 @@ import (
 func main() {
 	cli.AppHelpTemplate = fmt.Sprintf(`%s
 
-WEBSITE: http://darjun.github.io
+WEBSITE: http://darjun.github.io--
 
 WECHAT: GoUpUp`, cli.AppHelpTemplate)
 

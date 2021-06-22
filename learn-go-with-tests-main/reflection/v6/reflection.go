@@ -8,6 +8,7 @@ func walk(x interface{}, fn func(input string)) {
 	val := getValue(x)
 
 	numberOfValues := 0
+	//todo
 	var getField func(int) reflect.Value
 
 	switch val.Kind() {
@@ -16,6 +17,7 @@ func walk(x interface{}, fn func(input string)) {
 	case reflect.Struct:
 		numberOfValues = val.NumField()
 		getField = val.Field
+		// todo 切片支持
 	case reflect.Slice:
 		numberOfValues = val.Len()
 		getField = val.Index

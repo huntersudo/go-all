@@ -20,3 +20,8 @@ func BenchmarkCheckWebsites(b *testing.B) {
 		CheckWebsites(slowStubWebsiteChecker, urls)
 	}
 }
+//goos: windows
+//goarch: amd64
+//pkg: github.com/quii/learn-go-with-tests/concurrency/v3
+//BenchmarkCheckWebsites-12    	      56	  20929538 ns/op
+//PASS

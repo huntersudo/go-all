@@ -7,6 +7,7 @@ import (
 func walk(x interface{}, fn func(input string)) {
 	val := getValue(x)
 
+	//todo
 	walkValue := func(value reflect.Value) {
 		walk(value.Interface(), fn)
 	}
@@ -22,6 +23,8 @@ func walk(x interface{}, fn func(input string)) {
 		for i := 0; i < val.Len(); i++ {
 			walkValue(val.Index(i))
 		}
+
+		//todo map
 	case reflect.Map:
 		for _, key := range val.MapKeys() {
 			walkValue(val.MapIndex(key))

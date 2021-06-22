@@ -53,7 +53,7 @@ func Example_ptrToInterface() {
 	var w io.Writer
 	Display("&w", &w)
 	// Output:
-	// Display &w (*io.Writer):
+	// Display &w (*io--.Writer):
 	// (*&w) = nil
 }
 
@@ -163,7 +163,7 @@ func Test(t *testing.T) {
 	var w io.Writer = os.Stderr
 	Display("&w", &w)
 	// Output:
-	// Display &w (*io.Writer):
+	// Display &w (*io--.Writer):
 	// (*&w).type = *os.File
 	// (*(*(*&w).value).file).fd = 2
 	// (*(*(*&w).value).file).name = "/dev/stderr"

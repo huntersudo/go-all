@@ -38,14 +38,14 @@ func toJPEG(in io.Reader, out io.Writer) error {
 
 /*
 //!+with
-$ go build gopl.io/ch3/mandelbrot
-$ go build gopl.io/ch10/jpeg
+$ go build gopl.io--/ch3/mandelbrot
+$ go build gopl.io--/ch10/jpeg
 $ ./mandelbrot | ./jpeg >mandelbrot.jpg
 Input format = png
 //!-with
 
 //!+without
-$ go build gopl.io/ch10/jpeg
+$ go build gopl.io--/ch10/jpeg
 $ ./mandelbrot | ./jpeg >mandelbrot.jpg
 jpeg: image: unknown format
 //!-without

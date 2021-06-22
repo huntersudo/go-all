@@ -22,6 +22,7 @@ func TestWalk(t *testing.T) {
 	}
 
 	for _, test := range cases {
+
 		t.Run(test.Name, func(t *testing.T) {
 			var got []string
 			walk(test.Input, func(input string) {
@@ -32,5 +33,6 @@ func TestWalk(t *testing.T) {
 				t.Errorf("got %v, want %v", got, test.ExpectedCalls)
 			}
 		})
+
 	}
 }

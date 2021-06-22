@@ -42,7 +42,7 @@ func main() {
 
 /*
 //!+output
-$ go build gopl.io/ch12/search
+$ go build gopl.io--/ch12/search
 $ ./search &
 $ ./fetch 'http://localhost:12345/search'
 Search: {Labels:[] MaxResults:10 Exact:false}

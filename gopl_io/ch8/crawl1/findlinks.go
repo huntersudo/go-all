@@ -56,7 +56,7 @@ func main() {
 
 /*
 //!+output
-$ go build gopl.io/ch8/crawl1
+$ go build gopl.io--/ch8/crawl1
 $ ./crawl1 http://gopl.io/
 http://gopl.io/
 https://golang.org/help/

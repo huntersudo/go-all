@@ -26,7 +26,7 @@ func ExamplePrintReplacer() {
 	// Output:
 	// type *strings.Replacer
 	// func (*strings.Replacer) Replace(string) string
-	// func (*strings.Replacer) WriteString(io.Writer, string) (int, error)
+	// func (*strings.Replacer) WriteString(io--.Writer, string) (int, error)
 }
 
 /*
@@ -44,6 +44,6 @@ methods.Print(new(strings.Replacer))
 // Output:
 // type *strings.Replacer
 // func (*strings.Replacer) Replace(string) string
-// func (*strings.Replacer) WriteString(io.Writer, string) (int, error)
+// func (*strings.Replacer) WriteString(io--.Writer, string) (int, error)
 //!-output
 */

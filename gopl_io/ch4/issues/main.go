@@ -33,7 +33,7 @@ func main() {
 
 /*
 //!+textoutput
-$ go build gopl.io/ch4/issues
+$ go build gopl.io--/ch4/issues
 $ ./issues repo:golang/go is:open json decoder
 
 13 issues:

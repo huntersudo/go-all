@@ -21,7 +21,7 @@ func walk(x interface{}, fn func(input string)) {
 
 func getValue(x interface{}) reflect.Value {
 	val := reflect.ValueOf(x)
-
+//todo 指针类型的 Value 不能使用 NumField 方法，在执行此方法前需要调用 Elem() 提取底 层值。
 	if val.Kind() == reflect.Ptr {
 		val = val.Elem()
 	}

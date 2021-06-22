@@ -16,7 +16,7 @@ import (
 
 func main() {
 	//for _, url := range os.Args[1:] {
-	url := "http://gopl.io"
+	url := "http://gopl.io--"
 	//url := "http://baidu.com"
 	resp, err := http.Get(url)
 	if err != nil {

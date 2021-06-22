@@ -25,7 +25,7 @@ func TestConcurrent(t *testing.T) {
 
 /*
 //!+output
-$ go test -v gopl.io/ch9/memo1
+$ go test -v gopl.io--/ch9/memo1
 === RUN   Test
 https://golang.org, 175.026418ms, 7537 bytes
 https://godoc.org, 172.686825ms, 6878 bytes
@@ -38,30 +38,30 @@ https://play.golang.org, 205ns, 5767 bytes
 http://gopl.io, 326ns, 2856 bytes
 --- PASS: Test (1.21s)
 PASS
-ok  gopl.io/ch9/memo1	1.257s
+ok  gopl.io--/ch9/memo1	1.257s
 //!-output
 */
 
 /*
 //!+race
-$ go test -run=TestConcurrent -race -v gopl.io/ch9/memo1
+$ go test -run=TestConcurrent -race -v gopl.io--/ch9/memo1
 === RUN   TestConcurrent
 ...
 WARNING: DATA RACE
 Write by goroutine 36:
   runtime.mapassign1()
       ~/go/server/runtime/hashmap.go:411 +0x0
-  gopl.io/ch9/memo1.(*Memo).Get()
-      ~/gobook2/server/gopl.io/ch9/memo1/memo.go:32 +0x205
+  gopl.io--/ch9/memo1.(*Memo).Get()
+      ~/gobook2/server/gopl.io--/ch9/memo1/memo.go:32 +0x205
   ...
 
 Previous write by goroutine 35:
   runtime.mapassign1()
       ~/go/server/runtime/hashmap.go:411 +0x0
-  gopl.io/ch9/memo1.(*Memo).Get()
-      ~/gobook2/server/gopl.io/ch9/memo1/memo.go:32 +0x205
+  gopl.io--/ch9/memo1.(*Memo).Get()
+      ~/gobook2/server/gopl.io--/ch9/memo1/memo.go:32 +0x205
 ...
 Found 1 data race(s)
-FAIL	gopl.io/ch9/memo1	2.393s
+FAIL	gopl.io--/ch9/memo1	2.393s
 //!-race
 */

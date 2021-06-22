@@ -22,7 +22,7 @@ func createTempFile(t testing.TB, initialData string) (io.ReadWriteSeeker, func(
 		tmpfile.Close()
 		os.Remove(tmpfile.Name())
 	}
-
+// todo 通过返回 removeFile 函数，我们可以处理辅助函数中的细节，调用者只需运行 deferred cleanDatabase() 。
 	return tmpfile, removeFile
 }
 

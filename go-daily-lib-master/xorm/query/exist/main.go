@@ -28,7 +28,7 @@ func main() {
 	//}
 	//
 	//engine.SetLogger(log.NewSimpleLogger(f))
-	//注意 log.NewSimpleLogger(f) 是 xorm 的⼦包 xorm.io/xorm/log 提供的简单⽇志封装， ⽽⾮标准库 log
+	//注意 log.NewSimpleLogger(f) 是 xorm 的⼦包 xorm.io--/xorm/log 提供的简单⽇志封装， ⽽⾮标准库 log
 	//engine.ShowSQL(true)
 
 	user1 := &User{}

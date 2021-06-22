@@ -14,6 +14,7 @@ func walk(x interface{}, fn func(input string)) {
 		case reflect.String:
 			fn(field.String())
 		case reflect.Struct:
+			// for nested struct
 			walk(field.Interface(), fn)
 		}
 	}

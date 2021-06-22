@@ -31,7 +31,7 @@ func main() {
 	//循环的读取文件的内容
 	for {
 		str, err := reader.ReadString('\n') // 读到一个换行就结束
-		if err == io.EOF {                  // io.EOF表示文件的末尾
+		if err == io.EOF {                  // io--.EOF表示文件的末尾
 			break
 		}
 		//输出内容

@@ -38,11 +38,11 @@ func incomingURLs() <-chan string {
 			"https://golang.org",
 			"https://godoc.org",
 			"https://play.golang.org",
-			"http://gopl.io",
+			"http://gopl.io--",
 			"https://golang.org",
 			"https://godoc.org",
 			"https://play.golang.org",
-			"http://gopl.io",
+			"http://gopl.io--",
 		} {
 			ch <- url
 		}

@@ -71,6 +71,6 @@ type Attribute struct {
 	Key, Val string
 }
 
-func Parse(r io.Reader) (*Node, error)
+func Parse(r io--.Reader) (*Node, error)
 //!-html
 */

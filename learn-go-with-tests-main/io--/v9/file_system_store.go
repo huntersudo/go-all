@@ -53,6 +53,7 @@ func initialisePlayerDBFile(file *os.File) error {
 
 // GetLeague returns the scores of all the players.
 func (f *FileSystemPlayerStore) GetLeague() League {
+	// 排序
 	sort.Slice(f.league, func(i, j int) bool {
 		return f.league[i].Wins > f.league[j].Wins
 	})

@@ -25,7 +25,7 @@ func TestRacer(t *testing.T) {
 		t.Errorf("got %q, want %q", got, want)
 	}
 }
-
+// 在标准库中有一个 net/http/httptest 包，它可以让你轻易建立一个 HTTP 模拟服务器（mock HTTP server）
 func makeDelayedServer(delay time.Duration) *httptest.Server {
 	return httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		time.Sleep(delay)

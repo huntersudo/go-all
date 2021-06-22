@@ -24,7 +24,7 @@ func main() {
 //!-
 /**
 desktop-huntersudo@DESKTOP-C1 MINGW64 /d/workspace/ws1/src/github.com/go-all/gopl_io (master)
-$ go build gopl.io/ch7/tempflag/
+$ go build gopl.io--/ch7/tempflag/
 
 desktop-huntersudo@DESKTOP-C1 MINGW64 /d/workspace/ws1/src/github.com/go-all/gopl_io (master)
 $ ls

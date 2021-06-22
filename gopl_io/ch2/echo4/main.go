@@ -27,7 +27,7 @@ func main() {
 
 //!-
 /**
-$ go build gopl.io/ch2/echo4
+$ go build gopl.io--/ch2/echo4
 $ ./echo4 a bc def
 a bc def
 $ ./echo4 -s / a bc def

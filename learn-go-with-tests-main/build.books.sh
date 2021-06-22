@@ -23,7 +23,7 @@ set -e
 #    app-intro.md \
 #    http-server.md \
 #    json.md \
-#    io.md \
+#    io--.md \
 #    command-line.md \
 #    time.md \
 #    websockets.md \

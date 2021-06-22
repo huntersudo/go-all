@@ -26,7 +26,7 @@ import (
 	//"github.com/spf13/cobra"
 	//"github.com/uber/jaeger-client-go"
 	//jaegerconfig "github.com/uber/jaeger-client-go/config"
-	utilerrors "k8s.io/apimachinery/pkg/util/errors"
+	utilerrors "k8s.io--/apimachinery/pkg/util/errors"
 )
 
 // NewAPIRoutingCommand creates a *cobra.Command object with default parameters

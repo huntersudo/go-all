@@ -105,7 +105,7 @@ type Profile struct {
 	Age  int
 	City string
 }
-
+// 我们需要将带有 map 的断言移动到一个新的测试中，在这个测试中我们不关心顺序
 func assertContains(t testing.TB, haystack []string, needle string) {
 	t.Helper()
 	contains := false

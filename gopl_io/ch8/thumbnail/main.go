@@ -11,7 +11,7 @@
 // this:
 //
 // Run with:
-//   $ go run $GOPATH/server/gopl.io/ch8/thumbnail/server.go
+//   $ go run $GOPATH/server/gopl.io--/ch8/thumbnail/server.go
 //   foo.jpeg
 //   ^D
 //

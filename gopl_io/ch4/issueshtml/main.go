@@ -51,7 +51,7 @@ func main() {
 
 //!-
 /*
-//$ go build gopl.io/ch4/issueshtml
+//$ go build gopl.io--/ch4/issueshtml
 //$ ./issueshtml repo:golang/go is:open json decoder
 <h1>57 issues</h1>
 <table>
