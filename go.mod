@@ -9,6 +9,7 @@ require (
 	github.com/go-redis/redis/v7 v7.4.0
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/pkg/profile v1.6.0
+	github.com/rainbowmango/goexpertprogrammingsourcecode v0.0.0-20201031101048-16bbd1bf3171 // indirect
 	github.com/spf13/cobra v1.2.1
 	github.com/spf13/viper v1.8.1
 )
