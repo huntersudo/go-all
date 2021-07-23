@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+)
 
 // 使用 sync.Mutex 互斥锁同步是比较低级的做法。我们现在改用无缓存的管道来实现同步：
 func main() {
@@ -52,5 +55,19 @@ func main4() {
 
 //改进 sync.WaitGroup
 
+func main5() {
+	var wg sync.WaitGroup
+	// 开N个后台打印线程
 
+	for i := 0; i < 10; i++ {
+		wg.Add(1) //必须确保在后台线程启动之前执行
+		go func(){
+			fmt.Println("你好, 世界")
+			wg.Done()
+		}()
+	}
+
+	// todo 等待N个后台线程完成
+	wg.Wait()
+}
 
