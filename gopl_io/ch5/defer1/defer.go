@@ -34,15 +34,15 @@ defer 3
 //!+stderr
 panic: runtime error: integer divide by zero
 server.f(0)
-        server/gopl.io--/ch5/defer1/defer.go:14
+        server/gopl.io--/ch5/defer1/defer_close.go:14
 server.f(1)
-        server/gopl.io--/ch5/defer1/defer.go:16
+        server/gopl.io--/ch5/defer1/defer_close.go:16
 server.f(2)
-        server/gopl.io--/ch5/defer1/defer.go:16
+        server/gopl.io--/ch5/defer1/defer_close.go:16
 
 server.f(3)
-        server/gopl.io--/ch5/defer1/defer.go:16
+        server/gopl.io--/ch5/defer1/defer_close.go:16
 server.server()
-        server/gopl.io--/ch5/defer1/defer.go:10
+        server/gopl.io--/ch5/defer1/defer_close.go:10
 //!-stderr
 */

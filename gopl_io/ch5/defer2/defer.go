@@ -36,16 +36,16 @@ func f(x int) {
 //!+printstack
 goroutine 1 [running]:
 server.printStack()
-	server/gopl.io--/ch5/defer2/defer.go:20
+	server/gopl.io--/ch5/defer2/defer_close.go:20
 server.f(0)
-	server/gopl.io--/ch5/defer2/defer.go:27
+	server/gopl.io--/ch5/defer2/defer_close.go:27
 server.f(1)
-	server/gopl.io--/ch5/defer2/defer.go:29
+	server/gopl.io--/ch5/defer2/defer_close.go:29
 server.f(2)
-	server/gopl.io--/ch5/defer2/defer.go:29
+	server/gopl.io--/ch5/defer2/defer_close.go:29
 server.f(3)
-	server/gopl.io--/ch5/defer2/defer.go:29
+	server/gopl.io--/ch5/defer2/defer_close.go:29
 server.server()
-	server/gopl.io--/ch5/defer2/defer.go:15
+	server/gopl.io--/ch5/defer2/defer_close.go:15
 //!-printstack
 */
