@@ -21,8 +21,19 @@ type Trade struct {
 }
 
 func main() {
+
 	createQuery(Student{Age:  20, Name: "jonson",})
+	// 演示
+	// query =  insert into Student values(
+	// %s%d -> query = insert into Student values(20
+	// "%s, \"%s\"" -> query = insert into Student values(20,"jonson"
+	// "%s)"  -> query = insert into Student values(20,"jonson")
 	createQuery(Trade{tradeId: 123, Price:   456,})
+	// insert into Trade values(
+	// %s%d -> insert into Trade values(123
+	// %s, %d -> insert into Trade values(123,456
+	// "%s)"  -> insert into Trade values(123,456)
+
 }
 
 func createQuery(q interface{}) string{

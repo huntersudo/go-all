@@ -6,6 +6,7 @@ import (
 )
 
 func main(){
+	// Elem方法返回 指针或者接口指向的数据
 	aa := 56
 	xx := reflect.ValueOf(&aa).Elem().Int()
 	fmt.Printf("type:%T value:%v\n", xx, xx) //type:int64 value:56

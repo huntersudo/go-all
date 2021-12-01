@@ -12,4 +12,5 @@ func main(){
 
 	equl := reflect.TypeOf(num).Kind() == reflect.Float64
 	fmt.Println("kind is float64: ", equl)  //kind is float64: true
+	fmt.Println(" float64: ", reflect.Float64)  //kind is float64: true
 }
