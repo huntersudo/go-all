@@ -18,4 +18,4 @@ pkg
 *.rar
 *.iml
 *log
-/gopl_io/go.sum
+/_a_book_list/gopl_io/go.sum
