@@ -18,7 +18,8 @@ func main() {
 	for _, link := range links {
 		go checkLink(link, c)
 	}
-
+	//TODO 获取通道高级写法，该写法有问题，因为l引用的是相同的地址，需要建立副本  P257
+	// 改进的结果如下，l建立副本
 	for l:=range c{
 		go func(url string) {
 			checkLink(l,c)

@@ -10,7 +10,7 @@ func main(){
 	go func() {
 		for {
 			data,ok:= <-c
-			if !ok{
+			if !ok{  // todo 通道的循环退出
 				break
 			}
 			fmt.Println("goroutine one: ",data,ok)

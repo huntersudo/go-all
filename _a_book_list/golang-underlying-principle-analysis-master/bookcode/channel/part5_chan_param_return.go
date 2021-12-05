@@ -5,8 +5,10 @@ import (
 	"time"
 )
 
-//通道作为一等公民，作为参数和返回值
-func worker(id int, c chan int) {
+//通道作为一等公民，作为参数和返回值，
+// todo 通道是引用类型，实际都是同一个通道
+//func worker(id int, c chan int) {
+func worker(id int, c <-chan int) {  // todo 签名换成  单方向通道（只读）
 	for n := range c {
 		fmt.Printf("Worker %d received %c\n",
 			id, n)

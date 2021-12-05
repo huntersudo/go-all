@@ -5,7 +5,7 @@ import (
 )
 
 var count int64  = 0
-var m sync.Mutex
+var m sync.Mutex  // 互斥锁，比atomic的自旋锁要好，
 func add() {
 	m.Lock()
 	count++
