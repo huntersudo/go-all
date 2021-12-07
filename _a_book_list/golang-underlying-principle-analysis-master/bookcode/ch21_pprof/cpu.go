@@ -10,6 +10,7 @@ import (
 
 func main() {
 	http.HandleFunc("/log", logHandler)
+	// pprof 第一种方式： 引入 _ "net/http/pprof" 开启http服务 P355
 	http.ListenAndServe(":8080", nil)
 }
 

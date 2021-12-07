@@ -6,6 +6,11 @@ import (
 	"go/token"
 )
 
+// S3-抽象语法树构建  p6
+// ast 是一种常见的树状结构的中间态
+// import\type\const\func 都是一个根节点 ，在根节点下包含当前声明的子节点
+// 核心  gc/noder.go
+
 func main(){
 	src := `
 package main

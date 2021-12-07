@@ -3,11 +3,11 @@ package main
 import (
 	"log"
 	"net/http"
+	_ "net/http/pprof"
 	"os"
 	"runtime"
 	"sync"
 	"time"
-	_ "net/http/pprof"
 )
 
 func main() {
