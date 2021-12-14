@@ -14,3 +14,5 @@ func f() {
 func main() {
 	f()
 }
+// add: 3
+
